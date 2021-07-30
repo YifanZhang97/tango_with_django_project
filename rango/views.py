@@ -25,10 +25,8 @@ def index(request):
     context_dict['pages'] = page_list
 
     visitor_cookie_handler(request)
-    context_dict['visits'] = request.session['visits']
 
-    response = render(request, 'rango/index.html', context=context_dict)
-    return response
+    return render(request, 'rango/index.html', context=context_dict)
 
 def about(request):
 
